@@ -1,0 +1,5 @@
+export { ProfessionalTemplate } from './professional-template'
+export { ModernTemplate } from './modern-template'
+export { ElegantTemplate } from './elegant-template'
+export { MinimalTemplate } from './minimal-template'
+export { CreativeTemplate } from './creative-template'

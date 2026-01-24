@@ -1,0 +1,18 @@
+export { PersonalInfoSection } from './personal-info-section'
+export { SummarySection } from './summary-section'
+export { ExperienceSection } from './experience-section'
+export { EducationSection } from './education-section'
+export { SkillsSection } from './skills-section'
+
+// Phase 3 - Additional Sections
+export { ProjectsSection } from './projects-section'
+export { CertificationsSection } from './certifications-section'
+export { LanguagesSection } from './languages-section'
+export { AwardsSection } from './awards-section'
+export { CoursesSection } from './courses-section'
+export { InternshipsSection } from './internships-section'
+export { VolunteerSection } from './volunteer-section'
+export { ReferencesSection } from './references-section'
+export { ConferencesSection } from './conferences-section'
+export { HobbiesSection } from './hobbies-section'
+export { CustomSection } from './custom-section'
