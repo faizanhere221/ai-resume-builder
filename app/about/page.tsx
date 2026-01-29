@@ -21,8 +21,6 @@ import {
   Clock,
   TrendingUp,
   Linkedin,
-  Twitter,
-  Github,
 } from 'lucide-react'
 
 const values = [
@@ -71,29 +69,25 @@ const team = [
     name: 'Faizan',
     role: 'Founder & CEO',
     bio: 'CS student & entrepreneur passionate about AI and helping job seekers succeed.',
-    // Replace with your actual image URL or path
-    // Example: '/images/team/faizan.jpg' or 'https://example.com/faizan.jpg'
     image: '/images/team/faizan.jpg',
     fallbackEmoji: '👨‍💻',
-    social: { linkedin: 'https://www.linkedin.com/in/faizan-islam-41a3ab28b/'},
+    linkedin: 'https://www.linkedin.com/in/faizan-islam-41a3ab28b/',
   },
   {
     name: 'Farhan',
     role: 'Co-Founder & CTO',
     bio: 'Tech enthusiast building scalable solutions for real-world problems.',
-    // Replace with your actual image URL
     image: '/images/team/farhan.jpg',
     fallbackEmoji: '👨‍🔬',
-    social: { linkedin: 'https://www.linkedin.com/in/farhan-islam-570685303/'},
+    linkedin: 'https://www.linkedin.com/in/farhan-islam-570685303/',
   },
   {
     name: 'Israr',
     role: 'Co-Founder & Marketing',
     bio: 'Digital marketing expert helping ResumeAI reach those who need it most.',
-    // Replace with your actual image URL
     image: '/images/team/israr.jpg',
     fallbackEmoji: '📈',
-    social: { linkedin: 'https://www.linkedin.com/in/israr4se/'},
+    linkedin: 'https://www.linkedin.com/in/israr4se/',
   },
 ]
 
@@ -121,22 +115,15 @@ function TeamMemberCard({ member }: { member: typeof team[0] }) {
         <h3 className="text-xl font-semibold text-slate-900 mb-1">{member.name}</h3>
         <p className="text-blue-600 font-medium text-sm mb-3">{member.role}</p>
         <p className="text-slate-600 text-sm mb-4">{member.bio}</p>
-        <div className="flex justify-center gap-3">
-          {member.social.linkedin && (
-            <a href={member.social.linkedin} className="text-slate-400 hover:text-blue-600 transition-colors">
-              <Linkedin className="h-5 w-5" />
-            </a>
-          )}
-          {member.social.twitter && (
-            <a href={member.social.twitter} className="text-slate-400 hover:text-blue-400 transition-colors">
-              <Twitter className="h-5 w-5" />
-            </a>
-          )}
-          {member.social.github && (
-            <a href={member.social.github} className="text-slate-400 hover:text-slate-900 transition-colors">
-              <Github className="h-5 w-5" />
-            </a>
-          )}
+        <div className="flex justify-center">
+          <a 
+            href={member.linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-blue-600 transition-colors"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
         </div>
       </CardContent>
     </Card>
@@ -160,10 +147,10 @@ export default function AboutPage() {
             </Link>
             <div className="flex items-center gap-4">
               <Link href="/contact">
-                <Button variant="outline">Contact Us</Button>
+                <Button variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-50">Contact Us</Button>
               </Link>
               <Link href="/register">
-                <Button>Get Started Free</Button>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white">Get Started Free</Button>
               </Link>
             </div>
           </div>
@@ -174,11 +161,11 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 text-white">
             <Users className="h-4 w-4" />
             About Us
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             Helping Job Seekers
             <br />
             <span className="text-blue-200">Land Their Dream Jobs</span>
@@ -224,7 +211,7 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/register">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg">
                     Start Building Your Resume
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -354,7 +341,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-white">
             Ready to Build Your Resume?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
